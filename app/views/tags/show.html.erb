@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<h2>Tag Detail</h2>
+
+<p>
+  <strong>ID:</strong>
+  <%= @tag.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tag.title %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+<div style=" width: 20px; height: 20px; background-color: <%= @tag.color %>;"></div>
+<%= @tag.color %>
+</p>
+
+<p>
+  <strong>Created At:</strong>
+  <%= @tag.created_at %>
+</p>
+
+<p>
+  <strong>Updated At:</strong>
+  <%= @tag.updated_at %>
+</p>
+
+
+<p>
+  <strong>Tasks:</strong>
+  <% @tag.tasks.each do |task| %>
+    <%= task.title %>.
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_tag_path(@tag), class: "btn btn-success" %>
+<%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>

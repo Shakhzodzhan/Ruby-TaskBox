@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deadline at:</strong>
+  <%= @task.deadline_at %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @task.note %>
+</p>
+
+<p>
+  <strong>Is done:</strong>
+  <% if @task.is_done == true %>
+    Yes
+  <% else %>
+    No
+  <% end %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category.title %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+    <% @task.tags.each do |tag| %>
+  <%= tag.title %>
+  <% end %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_task_path(@task), class: "btn btn-success" %>
+<%= link_to 'Back', root_path, class: "btn btn-primary" %>

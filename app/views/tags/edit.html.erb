@@ -1,0 +1,11 @@
+<div class="cointainer">
+  <div class="category-tag">
+
+    <h1>Editing Tag</h1>
+    <%= render 'form', tagw: @tag %>
+    <br>
+    <%= link_to 'Detail', @tag, class: "btn btn-dark" %>
+    <%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>
+
+  </div>
+</div>

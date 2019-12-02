@@ -1,0 +1,13 @@
+<div class="cointainer">
+  <div class="task-form">
+
+    <h1>Editing Task</h1>
+
+    <%= render 'form', task: @task %>
+    <br>
+    <%= link_to 'Detail', @task, class: "btn btn-dark" %>
+    <%= link_to 'Back', root_path, class: "btn btn-primary" %>
+    <br>
+    <br>
+  </div>
+</div>

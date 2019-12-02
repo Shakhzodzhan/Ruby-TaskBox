@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<h2>Category Detail</h2>
+
+<p>
+  <strong>ID:</strong>
+  <%= @category.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @category.title %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @category.color %>
+<div style=" width: 20px; height: 20px; background-color: <%= @category.color %>;"></div>
+</p>
+
+
+<p>
+  <strong>Created At:</strong>
+  <%= @category.created_at %>
+</p>
+
+<p>
+  <strong>Updated At:</strong>
+  <%= @category.updated_at %>
+</p>
+
+
+<p>
+  <strong>Tasks:</strong>
+  <% @category.tasks.each do |task| %>
+    <%= task.title %>.
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category), class: "btn btn-success" %></button>
+<%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>

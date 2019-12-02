@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container-fluid">
+<table class="table">
+  <h1>Tasks</h1>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Note</th>
+      <th>Deadline at</th>
+      <th>Is done</th>
+      <th>Category</th>
+      <th>Tag</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.note %></td>
+        <td><%= task.deadline_at.strftime('%d.%m.%Y - %H:%M') %></td>
+        <% if task.is_done == true %>
+          <td>Yes</td>
+          <% else %>
+          <td>No</td>
+          <% end %>
+        <td><%= task.category.title %></td>
+       <%#= task.tags.each do |tag| %>
+<!--        <td><%#= tag.title %></td>-->
+        <%# end %>
+
+
+
+<!--        <td><%#= task.tags %></td>-->
+        <%# task.tags.each do |tag| %>
+<!--        <td><%#= tag.title %></td>-->
+        <%# end %>
+
+        <td>
+          <%= link_to 'Detail', task, class: "btn btn-dark" %>
+        </td>
+        <td>
+         <%= link_to 'Edit', edit_task_path(task), class: "btn btn-success" %>
+        </td>
+        <td>
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+<%= will_paginate @tasks, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+<br>
+
+<%= link_to 'New Task', new_task_path, class: "btn btn-primary" %>
+

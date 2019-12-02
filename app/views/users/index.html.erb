@@ -1,0 +1,30 @@
+
+
+<h2>Categories and Tags</h2>
+<p>
+  <strong>Categories:</strong>
+  <% current_user.categories.each do |category| %>
+    <%= category.title %>.
+      <% end %>
+  <br>
+  <strong>Tags:</strong>
+  <% current_user.tags.each do |tag| %>
+    <%= tag.title %>.
+  <% end %>
+</p>
+
+
+<%= link_to 'Manage Categories a Tags', settings_path(sort_by: "title"), class: "btn btn-primary" %>
+
+<%#= render 'tasks/index'%>
+
+
+<br>
+<hr>
+<%= link_to 'All Tasks', tasks_path(sort_by: "title"), class: "btn btn-primary" %>
+<br><br>
+
+
+
+
+
