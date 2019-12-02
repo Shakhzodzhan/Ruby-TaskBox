@@ -19,12 +19,12 @@
 
 <p>
   <strong>Created At:</strong>
-  <%= @tag.created_at %>
+  <%= @tag.created_at.strftime('%d.%m.%Y - %H:%M') %>
 </p>
 
 <p>
   <strong>Updated At:</strong>
-  <%= @tag.updated_at %>
+  <%= @tag.updated_at.strftime('%d.%m.%Y - %H:%M') %>
 </p>
 
 

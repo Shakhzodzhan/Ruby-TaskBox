@@ -15,12 +15,10 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 
   <% if user_signed_in? %>
-    <h5 class="my-0 mr-md-auto font-weight-bold"><%= link_to 'TaskBox:', root_path %> <%= current_user.username %>🦄</h5>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    </form>
+    <h5 class="my-0 mr-md-auto font-weight-bold"><%= link_to 'TaskBox:', root_path %> <%= current_user.username %>
+      🦄</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a><%= link_to 'Account Settings', edit_user_registration_path, class: "btn btn-outline-primary"%></a>
+      <a><%= link_to 'Account Settings', edit_user_registration_path, class: "btn btn-outline-primary" %></a>
       <a><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %></a>
     </nav>
   <% else %>
@@ -33,14 +31,13 @@
 </div>
 
 
-
-
 <p class="notice text-center"><%= notice %></p>
 <p class="alert text-center"><%= alert %></p>
 
 <div class="container">
   <%= yield %>
 </div>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

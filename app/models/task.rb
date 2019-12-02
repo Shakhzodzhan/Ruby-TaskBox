@@ -5,6 +5,18 @@ class Task < ApplicationRecord
   has_many :tags, through: :tag_associations
 
   validates :title, :note, presence: true
+
+  searchkick word_start: [:title, :note]
+
+  def search_data
+    {
+        title: title,
+        note: note,
+        category: category,
+        tag: tag
+    }
+  end
+
 # def self.search(search)
 #   if search
 #     where(["name LIKE ?", "%#{search}%"])

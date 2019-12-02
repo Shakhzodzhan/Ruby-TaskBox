@@ -13,19 +13,19 @@
 
 <p>
   <strong>Color:</strong>
-  <%= @category.color %>
 <div style=" width: 20px; height: 20px; background-color: <%= @category.color %>;"></div>
+<%= @category.color %>
 </p>
 
 
 <p>
   <strong>Created At:</strong>
-  <%= @category.created_at %>
+  <%= @category.created_at.strftime('%d.%m.%Y - %H:%M') %>
 </p>
 
 <p>
   <strong>Updated At:</strong>
-  <%= @category.updated_at %>
+  <%= @category.updated_at.strftime('%d.%m.%Y - %H:%M') %>
 </p>
 
 
