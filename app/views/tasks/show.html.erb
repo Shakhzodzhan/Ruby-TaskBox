@@ -2,7 +2,7 @@
 
 <p>
   <strong>Deadline at:</strong>
-  <%= @task.deadline_at %>
+  <%= @task.deadline_at.strftime('%d.%m.%Y - %H:%M') %>
 </p>
 
 <p>
@@ -26,15 +26,21 @@
 
 <p>
   <strong>Category:</strong>
-<% unless @task.category.blank? %>
+  <% unless @task.category.blank? %>
     <%= @task.category.title %>
+  <% else %>
+    There are no Category
   <% end %>
 </p>
 
 <p>
   <strong>Tag:</strong>
+  <% if @task.tags.count.to_i == 0 %>
+    There are no Tags
+  <% else %>
     <% @task.tags.each do |tag| %>
-  <%= tag.title %>
+      <%= tag.title %>.
+    <% end %>
   <% end %>
 </p>
 

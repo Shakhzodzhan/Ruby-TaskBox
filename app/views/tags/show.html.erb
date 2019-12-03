@@ -14,10 +14,10 @@
         <%= @tag.title %>
       </p>
 
-      <p>
+      <p class="for-show">
         <strong>Color:</strong>
-      <div style=" width: 20px; height: 20px; background-color: <%= @tag.color %>;"></div>
-      <%= @tag.color %>
+        <%= @tag.color %>
+      <div style=" width: 20px; height: 20px; display: inline-block; background-color: <%= @tag.color %>;"></div>
       </p>
 
       <p>
@@ -34,13 +34,20 @@
       <%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>
     </div>
     <div class="col">
+
+      <h3>Tasks:</h3>
       <p>
-      <h2>Tasks:</h2>
-      <% @tag.tasks.each do |task| %>
-        <p><%= link_to 'Detail', task, class: "btn btn-dark btn-sm" %>
-          <%= task.title %>.</p>
-      <% end %>
-      </p>
+        <% if @tag.tasks.count.to_i == 0 %>
+        <div class="alert alert-primary">
+          <strong>There are no Tasks</strong>
+        </div>
+      <% else %>
+        <% @tag.tasks.each do |task| %>
+          <p><%= link_to 'Detail', task, class: "btn btn-dark btn-sm" %>
+            <%= task.title %>.</p>
+        <% end %>
+      <% end %> </p>
+
     </div>
 
   </div>

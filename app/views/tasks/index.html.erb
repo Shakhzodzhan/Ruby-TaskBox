@@ -44,7 +44,7 @@
       <tr>
         <td><%= task.title %></td>
         <td><%= task.note %></td>
-        <td><%= task.deadline_at.strftime('%d.%m.%Y - %H:%M') %></td>
+        <td><%= task.deadline_at.strftime('%d.%m.%Y') %></td>
         <% if task.is_done == true %>
           <td>Yes</td>
         <% else %>
@@ -53,14 +53,19 @@
         <td>
           <% unless task.category.blank? %>
             <%= task.category.title %>
+          <% else %>
+            <strong>no Category</strong>
           <% end %>
         </td>
         <td>
-          <% task.tags.each do |tag| %>
-            <%= tag.title %>.
+          <% if task.tags.count.to_i == 0 %>
+            <strong>no Tags</strong>
+          <% else %>
+            <% task.tags.each do |tag| %>
+              <%= tag.title %>.
+            <% end %>
           <% end %>
         </td>
-
         <td>
           <%= link_to 'Detail', task, class: "btn btn-dark" %>
         </td>

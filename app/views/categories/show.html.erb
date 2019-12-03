@@ -16,10 +16,10 @@
       </p>
 
 
-      <p>
+      <p class="for-show">
         <strong>Color:</strong>
-      <div style=" width: 20px; height: 20px; background-color: <%= @category.color %>;"></div>
-      <%= @category.color %>
+        <%= @category.color %>
+      <div style=" width: 20px; height: 20px; display: inline-block; background-color: <%= @category.color %>;"></div>
       </p>
 
 
@@ -37,14 +37,20 @@
 
     </div>
     <div class="col">
-      <p>
-      <h2>Tasks:</h2>
-      <% @category.tasks.each do |task| %>
-        <p><%= link_to 'Detail', task, class: "btn btn-dark btn-sm" %>
-          <%= task.title %>.</p>
-      <% end %>
-      </p>
-    </div>
 
+      <h3>Tasks:</h3>
+      <p>
+        <% if @category.tasks.count.to_i == 0 %>
+        <div class="alert alert-primary">
+          <strong>There are no Tasks</strong>
+        </div>
+      <% else %>
+        <% @category.tasks.each do |task| %>
+          <p><%= link_to 'Detail', task, class: "btn btn-dark btn-sm" %>
+            <%= task.title %>.</p>
+        <% end %>
+      <% end %> </p>
+
+    </div>
   </div>
 </div>
