@@ -27,7 +27,9 @@
         <% else %>
           <td>No</td>
         <% end %>
-        <td><%= task.category.title %></td>
+        <td><% unless task.category.blank? %>
+          <%= task.category.title %>
+          <% end %></td>
         <%= task.tags.each do |tag| %>
           <td><%= tag.title %></td>
         <% end %>

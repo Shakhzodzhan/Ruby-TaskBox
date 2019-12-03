@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :user
-  belongs_to :category
+  belongs_to :category, required: false
   has_many :tag_associations
   has_many :tags, through: :tag_associations
 
