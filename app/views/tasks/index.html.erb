@@ -51,9 +51,9 @@
           <td>No</td>
         <% end %>
         <td><%= task.category.title %></td>
-        <%#= task.tags.each do |tag| %>
-        <!--        <td><%#= tag.title %></td>-->
-        <%# end %>
+        <%= task.tags.each do |tag| %>
+                <td><%= tag.title %></td>
+        <% end %>
 
 
 

@@ -13,7 +13,7 @@ class Task < ApplicationRecord
         title: title,
         note: note,
         category: category,
-        tag: tag
+        tags: tags
     }
   end
 

@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     @tasks = if search
                Task.search(search)
              else
-               @tasks = current_user.tasks.all.order("deadline_at").paginate(page: params[:page], per_page: 10)
+               @tasks = current_user.tasks.all.order("tasks.deadline_at DESC").paginate(page: params[:page], per_page: 10)
              end
     # @tasks = Task.search(params[:search])
     # @tasks = current_user.tasks.all
@@ -78,6 +78,6 @@ class TasksController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def task_params
-    params.require(:task).permit(:deadline_at, :title, :note, :is_done, :user_id, :category_id)
+    params.require(:task).permit(:deadline_at, :title, :note, :is_done, :user_id, :category_id, :tag_ids => [])
   end
 end
