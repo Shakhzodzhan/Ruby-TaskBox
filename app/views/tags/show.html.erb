@@ -1,39 +1,47 @@
-<p id="notice"><%= notice %></p>
-<h2>Tag Detail</h2>
+<div class="container">
+  <div class="row">
+    <div class="col">
 
-<p>
-  <strong>ID:</strong>
-  <%= @tag.id %>
-</p>
+      <h2>Tag Detail</h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tag.title %>
-</p>
+      <p>
+        <strong>ID:</strong>
+        <%= @tag.id %>
+      </p>
 
-<p>
-  <strong>Color:</strong>
-<div style=" width: 20px; height: 20px; background-color: <%= @tag.color %>;"></div>
-<%= @tag.color %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @tag.title %>
+      </p>
 
-<p>
-  <strong>Created At:</strong>
-  <%= @tag.created_at.strftime('%d.%m.%Y - %H:%M') %>
-</p>
+      <p>
+        <strong>Color:</strong>
+      <div style=" width: 20px; height: 20px; background-color: <%= @tag.color %>;"></div>
+      <%= @tag.color %>
+      </p>
 
-<p>
-  <strong>Updated At:</strong>
-  <%= @tag.updated_at.strftime('%d.%m.%Y - %H:%M') %>
-</p>
+      <p>
+        <strong>Created At:</strong>
+        <%= @tag.created_at.strftime('%d.%m.%Y - %H:%M') %>
+      </p>
 
+      <p>
+        <strong>Updated At:</strong>
+        <%= @tag.updated_at.strftime('%d.%m.%Y - %H:%M') %>
+      </p>
 
-<p>
-  <strong>Tasks:</strong>
-  <% @tag.tasks.each do |task| %>
-    <%= task.title %>.
-  <% end %>
-</p>
+      <%= link_to 'Edit', edit_tag_path(@tag), class: "btn btn-success" %>
+      <%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>
+    </div>
+    <div class="col">
+      <p>
+      <h2>Tasks:</h2>
+      <% @tag.tasks.each do |task| %>
+        <p><%= link_to 'Detail', task, class: "btn btn-dark btn-sm" %>
+          <%= task.title %>.</p>
+      <% end %>
+      </p>
+    </div>
 
-<%= link_to 'Edit', edit_tag_path(@tag), class: "btn btn-success" %>
-<%= link_to 'Back', settings_path(sort_by: "title"), class: "btn btn-primary" %>
+  </div>
+</div>

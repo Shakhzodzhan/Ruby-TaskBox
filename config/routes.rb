@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'account/account', as: 'account'
   get 'settings/index', as: 'settings'
   root 'users#index'
   resources :tag_associations

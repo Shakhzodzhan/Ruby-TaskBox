@@ -50,17 +50,16 @@
         <% else %>
           <td>No</td>
         <% end %>
-        <td><%= task.category.title %></td>
-        <%= task.tags.each do |tag| %>
-                <td><%= tag.title %></td>
-        <% end %>
-
-
-
-        <!--        <td><%#= task.tags %></td>-->
-        <%# task.tags.each do |tag| %>
-        <!--        <td><%#= tag.title %></td>-->
-        <%# end %>
+        <td>
+          <% unless task.category.blank? %>
+            <%= task.category.title %>
+          <% end %>
+        </td>
+        <td>
+          <% task.tags.each do |tag| %>
+            <%= tag.title %>.
+          <% end %>
+        </td>
 
         <td>
           <%= link_to 'Detail', task, class: "btn btn-dark" %>
