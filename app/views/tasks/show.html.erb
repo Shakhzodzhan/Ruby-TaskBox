@@ -1,49 +1,64 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
 
-<p>
-  <strong>Deadline at:</strong>
-  <%= @task.deadline_at.strftime('%d.%m.%Y - %H:%M') %>
-</p>
+      <h2>Task Detail</h2>
+      <p>
+        <strong>Deadline at:</strong>
+        <%= @task.deadline_at.strftime('%d.%m.%Y - %H:%M') %>
+      </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @task.title %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @task.title %>
+      </p>
 
-<p>
-  <strong>Note:</strong>
-  <%= @task.note %>
-</p>
+      <p>
+        <strong>Note:</strong>
+        <%= @task.note %>
+      </p>
 
-<p>
-  <strong>Is done:</strong>
-  <% if @task.is_done == true %>
-    Yes
-  <% else %>
-    No
-  <% end %>
-</p>
+      <p>
+        <strong>Is done:</strong>
+        <% if @task.is_done == true %>
+          Yes
+        <% else %>
+          No
+        <% end %>
+      </p>
+      <br>
+      <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-success" %>
+      <%= link_to 'Back', tasks_path, class: "btn btn-primary" %>
 
-<p>
-  <strong>Category:</strong>
-  <% unless @task.category.blank? %>
-    <%= @task.category.title %>
-  <% else %>
-    There are no Category
-  <% end %>
-</p>
+    </div>
+    <div class="col">
 
-<p>
-  <strong>Tag:</strong>
-  <% if @task.tags.count.to_i == 0 %>
-    There are no Tags
-  <% else %>
-    <% @task.tags.each do |tag| %>
-      <%= tag.title %>.
-    <% end %>
-  <% end %>
-</p>
+      <h3>Categories and Tags</h3>
+      <p>
+        <strong>Category:</strong>
+        <% unless @task.category.blank? %>
+          <%= @task.category.title %>
+        <% else %>
+        <div class="alert alert-primary">
+          <strong>There is no Category</strong>
+        </div>
+      <% end %>
+      </p>
 
-<br>
-<%= link_to 'Edit', edit_task_path(@task), class: "btn btn-success" %>
-<%= link_to 'Back', tasks_path, class: "btn btn-primary" %>
+      <p>
+        <strong>Tag:</strong>
+        <% if @task.tags.count.to_i == 0 %>
+        <div class="alert alert-primary">
+          <strong>There are no Tags</strong>
+        </div>
+      <% else %>
+        <% @task.tags.each do |tag| %>
+          <%= tag.title %>.
+        <% end %>
+      <% end %>
+      </p>
+
+
+    </div>
+  </div>
+</div>
