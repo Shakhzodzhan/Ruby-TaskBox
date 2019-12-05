@@ -17,9 +17,6 @@ class Task < ApplicationRecord
     }
   end
 
-  def after_create
-
-  end
 
 # def self.search(search)
 #   if search

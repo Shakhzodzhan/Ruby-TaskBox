@@ -2,14 +2,14 @@
 
 <h2>Categories and Tags</h2>
 <p>
-  <strong>Categories:</strong>
+  <strong><big>Categories:</big></strong>
   <% current_user.categories.each do |category| %>
-    <%= category.title %>.
+    <big><%= category.title %>.</big>
       <% end %>
   <br>
-  <strong>Tags:</strong>
+  <strong><big>Tags:</big></strong>
   <% current_user.tags.each do |tag| %>
-    <%= tag.title %>.
+   <big> #<%= tag.title %></big>
   <% end %>
 </p>
 
