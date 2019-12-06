@@ -1,9 +1,32 @@
 <p id="notice"><%= notice %></p>
 
+<h1 class="text-center">Manage Your Tasks</h1>
+<p class="lead text-muted text-center">You can manage your tasks on this workspace. Let's try it!</p><br>
 
+<div class="row justify-content-end">
+  <div class="col-sm-4">
+    <%= form_tag(tasks_path, method: :get, class: "form-inline", role: 'search') do %>
+      <div class="input-group">
+        <%= text_field_tag :term,
+                           params[:term],
+                           id: 'tasks_search',
+                           autocomplete: :off,
+                           placeholder: 'Search',
+                           class: 'form-control' %>
+
+        <div class="input-group-btn search-panel">
+          <%= link_to 'Clear', tasks_path, class: "btn btn-primary" %>
+          <%= submit_tag 'Search', name: nil, class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
 <div class="container-fluid">
   <table class="table">
-    <h1>Tasks</h1>
+    <h2>Tasks List</h2>
     <thead>
     <tr>
       <th>Title</th>
@@ -17,30 +40,32 @@
     </thead>
 
     <tbody>
-    <% current_user.tasks.each do |task| %>
+    <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
         <td><%= task.note %></td>
-        <td><%= task.deadline_at.strftime('%d.%m.%Y - %H:%M') %></td>
+        <td><%= task.deadline_at.strftime('%d.%m.%Y') %></td>
         <% if task.is_done == true %>
           <td>Yes</td>
         <% else %>
           <td>No</td>
         <% end %>
-        <td><% unless task.category.blank? %>
-          <%= task.category.title %>
-          <% end %></td>
-        <%= task.tags.each do |tag| %>
-          <td><%= tag.title %></td>
-        <% end %>
-
-
-
-        <!--        <td><%#= task.tags %></td>-->
-        <%# task.tags.each do |tag| %>
-        <!--        <td><%#= tag.title %></td>-->
-        <%# end %>
-
+        <td>
+          <% unless task.category.blank? %>
+            <%= task.category.title %>
+          <% else %>
+            <strong>no Category</strong>
+          <% end %>
+        </td>
+        <td>
+          <% if task.tags.count.to_i == 0 %>
+            <strong>no Tags</strong>
+          <% else %>
+            <% task.tags.each do |tag| %>
+              <%= tag.title %>.
+            <% end %>
+          <% end %>
+        </td>
         <td>
           <%= link_to 'Detail', task, class: "btn btn-dark" %>
         </td>
@@ -48,13 +73,15 @@
           <%= link_to 'Edit', edit_task_path(task), class: "btn btn-success" %>
         </td>
         <td>
-          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%= link_to 'Destroy', task, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
 </div>
+<br>
+<%= will_paginate @tasks, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 <br>
 
 <%= link_to 'New Task', new_task_path, class: "btn btn-primary" %>

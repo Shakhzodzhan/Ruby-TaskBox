@@ -31,10 +31,10 @@
     <tr>
       <th>Title</th>
       <th>Note</th>
-      <th>Deadline at</th>
-      <th>Is done</th>
+      <th>Deadline</th>
+      <th>Finished</th>
       <th>Category</th>
-      <th>Tag</th>
+      <th>Tags</th>
       <th colspan="6"></th>
     </tr>
     </thead>
@@ -43,8 +43,20 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
-        <td><%= task.note %></td>
-        <td><%= task.deadline_at.strftime('%d.%m.%Y') %></td>
+        <td>
+          <% unless task.note.blank? %>
+            <%= task.note %>
+          <% else %>
+            <strong>no Note</strong>
+          <% end %>
+        </td>
+        <td>
+          <% unless task.deadline_at.blank? %>
+            <%= task.deadline_at.strftime('%d.%m.%Y') %>
+          <% else %>
+            <strong>no Deadline</strong>
+          <% end %>
+        </td>
         <% if task.is_done == true %>
           <td>Yes</td>
         <% else %>
@@ -62,7 +74,7 @@
             <strong>no Tags</strong>
           <% else %>
             <% task.tags.each do |tag| %>
-              <%= tag.title %>.
+              #<%= tag.title %>
             <% end %>
           <% end %>
         </td>

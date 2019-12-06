@@ -3,4 +3,5 @@ class Tag < ApplicationRecord
   has_many :tag_associations
   has_many :tasks, through: :tag_associations, dependent: :destroy
 
+  validates :title, presence: true
 end

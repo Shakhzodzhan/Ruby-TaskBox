@@ -16,8 +16,12 @@
 
       <p class="for-show">
         <strong>Color:</strong>
-        <%= @tag.color %>
-      <div class="color-box" style="display: inline-block; background-color: <%= @tag.color %>;"></div>
+        <% unless @tag.color.blank? %>
+          <%= @tag.color %>
+        <div class="color-box" style="display: inline-block; background-color: <%= @tag.color %>;"></div>
+      <% else %>
+        no Color
+      <% end %>
       </p>
 
       <p>

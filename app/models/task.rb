@@ -4,7 +4,7 @@ class Task < ApplicationRecord
   has_many :tag_associations
   has_many :tags, through: :tag_associations, dependent: :destroy
 
-  validates :title, :note, presence: true
+  validates :title, presence: true
 
   searchkick word_start: [:title, :note]
 

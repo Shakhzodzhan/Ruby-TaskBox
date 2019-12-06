@@ -5,7 +5,11 @@
       <h2>Task Detail</h2>
       <p>
         <strong>Deadline at:</strong>
-        <%= @task.deadline_at.strftime('%d.%m.%Y - %H:%M') %>
+        <% unless @task.deadline_at.blank? %>
+          <%= @task.deadline_at.strftime('%d.%m.%Y') %>
+        <% else %>
+          no Deadline
+        <% end %>
       </p>
 
       <p>
@@ -15,11 +19,15 @@
 
       <p>
         <strong>Note:</strong>
-        <%= @task.note %>
+        <% unless @task.note.blank? %>
+          <%= @task.note %>
+        <% else %>
+          no Note
+        <% end %>
       </p>
 
       <p>
-        <strong>Is done:</strong>
+        <strong>Finished:</strong>
         <% if @task.is_done == true %>
           Yes
         <% else %>
@@ -53,7 +61,7 @@
         </div>
       <% else %>
         <% @task.tags.each do |tag| %>
-          <%= tag.title %>.
+          #<%= tag.title %>
         <% end %>
       <% end %>
       </p>

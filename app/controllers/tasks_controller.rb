@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     @tasks = if search
                Task.search(search)
              else
-               @tasks = current_user.tasks.all.order("tasks.deadline_at DESC").paginate(page: params[:page], per_page: 10)
+               @tasks = current_user.tasks.all.order("tasks.deadline_at DESC").paginate(page: params[:page], per_page: 30)
              end
     # @tasks = Task.search(params[:search])
     # @tasks = current_user.tasks.all

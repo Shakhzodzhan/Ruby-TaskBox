@@ -22,9 +22,19 @@
         <td><%= tag.id %></td>
         <td><%= tag.title %></td>
         <td>
-          <div class="color-box" style="background-color: <%= tag.color %>;"></div>
+          <% unless tag.color.blank? %>
+            <div class="color-box" style="background-color: <%= tag.color %>;"></div>
+          <% else %>
+            <strong>no Color</strong>
+          <% end %>
         </td>
-        <td><%= tag.color %></td>
+        <td>
+          <% unless tag.color.blank? %>
+            <%= tag.color %>
+          <% else %>
+            <strong>no Color Code</strong>
+          <% end %>
+        </td>
         <td><%= tag.created_at.strftime('%d.%m.%Y - %H:%M') %></td>
         <td><%= tag.updated_at.strftime('%d.%m.%Y - %H:%M') %></td>
         <td><%= tag.tasks.count.to_i %></td>

@@ -2,27 +2,36 @@
 
 <h2>Categories and Tags</h2>
 <p>
-  <strong><big>Categories:</big></strong>
+  <strong><h5>Categories:</h5></strong>
   <% current_user.categories.each do |category| %>
-    <big><%= category.title %>.</big>
+    <%= category.title %> <strong>|</strong>
       <% end %>
   <br>
-  <strong><big>Tags:</big></strong>
+  <strong><h5>Tags:</h5></strong>
   <% current_user.tags.each do |tag| %>
-   <big> #<%= tag.title %></big>
+   #<%= tag.title %>
   <% end %>
 </p>
 
 
-<%= link_to 'Manage Categories a Tags', settings_path(sort_by: "title"), class: "btn btn-primary" %>
+<%= link_to 'Manage Categories a Tags', settings_path, class: "btn btn-primary" %>
 <%= link_to 'Your Account', account_path, class: "btn btn-primary" %>
 
 <%#= render 'tasks/index'%>
+<hr>
 
+
+<h1>Your Tasks</h1>
+<p>
+  <strong><h4>Tasks:</h4></strong>
+  <% current_user.tasks.each do |category| %>
+    <%= category.title %> <strong>|</strong>
+  <% end %>
+  <br>
 
 <br>
-<hr>
-<%= link_to 'All Tasks', tasks_path(sort_by: "title"), class: "btn btn-primary" %>
+
+<%= link_to 'Manage Your Tasks', tasks_path, class: "btn btn-primary" %>
 <br><br>
 
 
