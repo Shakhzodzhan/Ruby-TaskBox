@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f9649dc-8124-40f3-8fa3-e7416dfe8dd6" name="Default Changelist" comment="commit before adding Filter parameters ))">
+    <list default="true" id="7f9649dc-8124-40f3-8fa3-e7416dfe8dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tag.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/tag.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/task.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/settings/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/settings/index.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +159,8 @@
       <workItem from="1575586109772" duration="20000" />
       <workItem from="1575588303251" duration="32000" />
       <workItem from="1575655283962" duration="1811000" />
-      <workItem from="1575661303652" duration="7256000" />
+      <workItem from="1575661303652" duration="9284000" />
+      <workItem from="1575719508624" duration="2886000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1575302009488</created>
@@ -227,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575580823567</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final is SOON!!!!!!!!!">
+      <created>1575669818936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575669818936</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +253,7 @@
     <MESSAGE value="Interface is Fully edited! I think so ))" />
     <MESSAGE value="Interface is Fully edited! I think so ))   +++++++" />
     <MESSAGE value="commit before adding Filter parameters ))" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit before adding Filter parameters ))" />
+    <MESSAGE value="Final is SOON!!!!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final is SOON!!!!!!!!!" />
   </component>
 </project>
