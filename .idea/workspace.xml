@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9649dc-8124-40f3-8fa3-e7416dfe8dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/categories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tags_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/_index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/categories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/settings/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/settings/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/_index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tasks/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +165,9 @@
       <workItem from="1575588303251" duration="32000" />
       <workItem from="1575655283962" duration="1811000" />
       <workItem from="1575661303652" duration="9284000" />
-      <workItem from="1575719508624" duration="2886000" />
+      <workItem from="1575719508624" duration="3070000" />
+      <workItem from="1575784739197" duration="271000" />
+      <workItem from="1575814159895" duration="1307000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1575302009488</created>
@@ -225,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575669818936</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Final is SOON    90%   !!!!!!!!!">
+      <created>1575733569772</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575733569772</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +268,7 @@
     <MESSAGE value="Interface is Fully edited! I think so ))   +++++++" />
     <MESSAGE value="commit before adding Filter parameters ))" />
     <MESSAGE value="Final is SOON!!!!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final is SOON!!!!!!!!!" />
+    <MESSAGE value="Final is SOON    90%   !!!!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final is SOON    90%   !!!!!!!!!" />
   </component>
 </project>
