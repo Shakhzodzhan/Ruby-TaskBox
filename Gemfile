@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+# 2019 Unicorn College | by Shakhzod Kholikov
 
+ruby '2.6.3'
 # gems
 gem 'bootstrap', '~> 4.0.0'
 gem 'simple_form'
